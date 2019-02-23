@@ -21,6 +21,11 @@ footer{
     height: 10px;  
     padding-top: 5%;
     padding-bottom: 5%;
+    position: absolute;
+    width: 99.5%;
+    bottom: 0;
+    max-width: 99.5%;
+    overflow: hidden;
 }
 
 nav{

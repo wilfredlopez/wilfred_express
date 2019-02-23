@@ -48,6 +48,13 @@ app.get("/bad", (req, res) => {
     });
 });
 
+app.get('/posts', (req, res)=> {
+    // res.send('About Page');
+    res.render('posts.hbs',{
+        pageTitle: 'Posts Page',
+    }); //using hbs package
+ });
+
 
 const port = process.env.PORT || 3000
 app.listen(port);
