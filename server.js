@@ -55,8 +55,10 @@ app.get("/bad", (req, res) => {
     });
 });
 
-app.listen(3000);
-console.log('Listening on port 3000');
+
+const port = process.env.port || 3000
+app.listen(port);
+console.log(`Listening on port ${port}`);
 
 //CREATING PUBLIC/STATIC FOLDER AND PARTIAL FOLDERS
 hbs.registerPartials(__dirname + '/views/partials');
@@ -76,3 +78,9 @@ hbs.registerHelper('screamIt',(text) =>{
 });// in this case i return a function.
 // call it from hbs or html file for example:
 // {{ screamIt welcomeMessage }}
+
+
+
+
+//NOTE
+//CREATED THE .gitignore file so Git can ignore those files 
