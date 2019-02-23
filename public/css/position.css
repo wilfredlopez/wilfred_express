@@ -1,0 +1,42 @@
+*::before, *::after{
+    box-sizing: border-boxl
+}
+
+body{
+    width: 100%;
+    margin: 0;
+}
+
+.content{
+
+ 
+}
+
+main{
+    padding: 0 25px;
+}
+footer{
+    text-align: center;
+    display: block;
+    height: 10px;  
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+nav{
+    background-color: #f6f6f6;
+    height: 50px;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+nav ul a li{
+    list-style: none;
+    display: inline;
+  
+   padding: 0.5em 1em;
+}
+
+nav ul a li:hover{
+    background-color: red;
+}
+
