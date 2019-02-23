@@ -2,9 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
-
 var app = express();
-
 
 //express middleware
 app.use((req, res, next) =>{
@@ -15,8 +13,7 @@ app.use((req, res, next) =>{
     fs.appendFile('server.log', log + '\n', (err) =>{
         if(err){
             console.log('There was an error');
-        }
-        
+        }        
     });
     next(); //allows the app to continue
 });
@@ -38,12 +35,8 @@ app.get("/", (req, res) =>{
 });
 
 
-
 app.get('/about', (req, res)=> {
    // res.send('About Page');
-
-
-
    res.render('about.hbs',{
        pageTitle: 'About Page',
    }); //using hbs package
@@ -56,7 +49,7 @@ app.get("/bad", (req, res) => {
 });
 
 
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 app.listen(port);
 console.log(`Listening on port ${port}`);
 
@@ -78,9 +71,3 @@ hbs.registerHelper('screamIt',(text) =>{
 });// in this case i return a function.
 // call it from hbs or html file for example:
 // {{ screamIt welcomeMessage }}
-
-
-
-
-//NOTE
-//CREATED THE .gitignore file so Git can ignore those files 
