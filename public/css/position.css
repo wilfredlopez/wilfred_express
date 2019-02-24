@@ -1,5 +1,6 @@
+
 *::before, *::after{
-    box-sizing: border-boxl
+    box-sizing: border-box;
 }
 
 body{
@@ -21,18 +22,22 @@ footer{
     height: 10px;  
     padding-top: 5%;
     padding-bottom: 5%;
-    position: absolute;
+    position: relative;
     width: 99.5%;
-    bottom: 0;
     max-width: 99.5%;
     overflow: hidden;
+    margin-bottom: 5px;
 }
-
+.logo{
+    height: 50px;
+    float: left;
+    padding: 5px;
+}
 nav{
-    background-color: #f6f6f6;
     height: 50px;
     justify-content: center;
     padding: 10px 0 10px 0;
+    text-align: center;
 }
 nav ul a li{
     list-style: none;
@@ -41,7 +46,33 @@ nav ul a li{
    padding: 0.5em 1em;
 }
 
-nav ul a li:hover{
-    background-color: red;
+
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5%;
 }
 
+.heroleft,.heroright{
+flex: 1;
+align-self: flex-start;
+
+}
+.heroright{
+    text-align: center; 
+}
+
+.heroright img{
+    box-sizing: border-box;
+    padding: 20px 0;
+    max-width: 290px;
+}
+
+form ul{
+    list-style: none;
+    padding: 25px 0;
+}
+
+form ul li{
+    padding: 5px 0;
+}

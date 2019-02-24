@@ -55,6 +55,13 @@ app.get('/posts', (req, res)=> {
     }); //using hbs package
  });
 
+ app.get('/contact', (req, res)=> {
+    // res.send('About Page');
+    res.render('contact.hbs',{
+        pageTitle: 'Contact Page',
+    }); //using hbs package
+ });
+
 
 const port = process.env.PORT || 3000
 app.listen(port);
